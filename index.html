@@ -1,0 +1,98 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="zh-cn">
+<meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport">
+<meta name="google-site-verification" content="1u7-iZx1W2DF1tV8LUD1cauJrMnYgXLLjhTHXGcZqh0" /> 
+<title>佩伦导航 - 分类网站集合</title>
+<meta name="description" content="佩伦导航是各类网站的集合，依据类型进行导航。佩伦导航便于各类用户快速找到自己想要的网站。佩伦导航具有较高的实用性，无任何类型的广告，简洁易用。佩伦导航致力于成为您的浏览器主页。欢迎使用佩伦导航。">
+<meta name="keywords" content="佩伦导航,导航页,导航,网址导航">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/head.js"></script>
+</head>
+<body style="display:none" class="test-5">
+<div class="bgimg">
+</div>
+<script type="text/javascript">
+	null==localStorage.getItem("back")&&localStorage.setItem("back","none");
+	var a=localStorage.getItem("back");
+	if("none"==a) $(".bgimg").css("background-image",'url("")')
+	else if("dongman"==a)	{
+		var thisPic = localStorage.getItem("bgimg")
+		if(thisPic != null)	$(".bgimg").css("background-image", thisPic)
+		else $(".bgimg").css("background-image", "url(https://file.alapi.cn/image/comic/215759-15411670797737.jpg)")
+		$.ajax({
+			url: "https://v1.alapi.cn/api/acg?token=jrY5j7oat",
+			dataType: 'JSON',
+			jsonp: 'callback',
+			type: "GET",
+			data: {
+				format: "json"
+			},
+			success: function(re) {
+				localStorage.setItem("bgimg", "url(" + re.data.url + ")")
+				console.log(re.data.url)
+			}
+		})
+	}else if("bing"==a) $(".bgimg").css("background-image",'url("https://api.dujin.org/bing/1920.php")')
+	else $(".bgimg").css("background-image",'url("'+localStorage.getItem("mypic")+'")')
+$(function(){$("body").fadeIn(800)})</script>
+<div class="navbar">
+	<header>
+	<h1 class="title"><a href="https://sblpl.cn"><img src="https://cdn.jsdelivr.net/gh/prperen/prperen.github.io/img/pldh.png" class="pldh"> - 分类网站集合</a></h1>
+	<a class="subtitle" onclick="location.reload()">初次见面 点我设置</a>
+	<script type="text/javascript">null!=localStorage.getItem("name")&&""!=localStorage.getItem("name")||$(".subtitle").attr("href","html/setting.html?url="+window.location.href)</script>
+	<script src="js/greet.js"></script>
+	</header>
+	<div class="search">
+		<img src="img/icoc/black.ico" alt="搜索" class="searchicoc" onclick="goOn()"><input type="search" placeholder="使用 百度 进行搜索 (Ctrl + Q)">
+	</div>
+</div>
+<!--
+<div class="con notice transparent">
+	<h2 style="margin:19 auto">关于网站停止维护的通知</h2>
+	<p style="margin:16 0;text-indent:2em">
+		本人是一名 <b style="color:#c0392b">在读高中生 </b>，无法承担<b style="color:#2980b9"> 服务器 </b>的<b style="color:#f40"> 巨额费用 </b>。一直以来我坚信<b style="color:#1e90ff"> “ 知识改变命运 ” </b>，我深知要不断的完善自己才能摆脱贫困。贫困不是我的绊脚石，相反它是我<b style="color:#3742fa"> 前进的动力 </b>。
+	</p>
+	<p style="margin:16 0;text-indent:2em">
+		同时，我非常感谢各位给予我的帮助，我会在以后的日子里，更加严格要求自己，学好科学文化知识，争取早日服务于社会，为国家奉献一份力量。我想我现在能做的就是好好学习,将来做一个对国家、社会有用的人，尽自己所能来回报所有帮助过我的人，回报社会。
+	</p>
+	<p style="margin:16 0;text-indent:2em">
+		经过几天激烈的商量与研讨，我谨代表 <b style="color:gold;font-size:1.15em;text-shadow:1px 1px 0 #000">长春市佩伦科技有限公司 </b>宣布停止对网站的维护并托管至 <b style="color: #f4f8fb;background-color: black;">Porn</b><b style="color:#000;background-color: rgba(247, 151, 29, 1);">hub</b> 呵忒 <b style="color:#24292e"> Github </b>，网站仍可正常使用。可通过 <a href="https://wj.qq.com/s2/3808169/f7d3/">留言反馈 </a>联系我们。再次，真挚的感谢各位与会的领导、评委和在座的朋友们！
+	</p>
+	<div title="关闭" class="close" onclick='localStorage.setItem("close","yes")'>
+		×
+	</div>
+</div>
+-->
+<div id="con"></div>
+<script src="js/normal.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript">$(".con:eq(0)").append("<a href='html/co.html?url="+window.location.href+"' class='btn add' id='jia' target='_self'>添加</a>"),$(".con:eq(0)").append("<a href='html/deco.html?url="+window.location.href+"' class='btn add' id='jian' target='_self'>删除</a>")</script>
+<div class="con">
+	<div class="title" id="pay">
+		<img src="img/icoc/dashang.png" alt="打赏"><span>向我投食</span>
+	</div>
+	<h1 style="text-align:center">请给我一点帮助吧，哪怕是一丁点儿</h1>
+	<ul class="pay">
+		<li><img src="img/pay/qq.png" alt="qq">
+		<div class="name">
+			QQ
+		</div>
+		</li>
+		<li><img src="img/pay/wechat.png" alt="wechat">
+		<div class="name">
+			微信
+		</div>
+		</li>
+		<li><img src="img/pay/alipay.png" alt="alipay">
+		<div class="name">
+			支付宝
+		</div>
+		</li>
+	</ul>
+</div>
+<script type="text/javascript">function goOn(){for(var c=$(".search input").val();0<=c.indexOf("+");)c=c.replace("+","%2B");window.open("https://www.baidu.com/s?wd="+c)}$(".close").click(function(){$(".notice").hide()}),"yes"==localStorage.getItem("close")&&$(".notice").hide(),$(".con,.search,.title,.subtitle").addClass("transparent"),$(".search input").focus(function(){$(".searchicoc").attr("src","img/icoc/white.ico"),$(".search").addClass("focus")}),$(".search input").blur(function(){$(".searchicoc").attr("src","img/icoc/black.ico"),$(".search").removeClass("focus")}),$(".search input").bind("keydown",function(c){13==(window.event||arguments.callee.caller.arguments[0]).keyCode&&goOn()}),$(document).keypress(function(c){17==c.keyCode&&c.ctrlKey&&($(".search input").focus(),c.returnValue=!1)})</script>
+</body>
+</html>

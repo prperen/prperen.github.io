@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport" />
+	<title>佩伦导航-添加链接</title>
+	<meta name="description" content="佩伦导航是各类网站的集合，依据类型进行导航。便于各类用户快速找到自己想要的网站。本站具有较高的实用性，无任何类型的广告，简洁易用。致力于成为您的浏览器主页。">
+	<meta name="keywords" content="导航页,佩伦导航,导航,网址导航">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="../js/hanshu.js"></script>
+  </head>
+  <body>
+  	<div class="bgimg"></div>
+	<div class="navbar">
+		<header>
+			<h1 class="title">
+				<a href="https://peilun.cc" class="nuxt-link-exact-active nuxt-link-active title">佩伦导航 - 分类网站集合</a>
+			</h1>
+			<div class="subtitle">
+				<span>&nbsp;欢迎使用佩伦导航</span>
+			</div>
+		</header>
+	</div>
+	<div class="con pt" style="">
+  		<div class="title">
+  			<span>添加链接</span>
+  		</div>
+	  	<div class="input fullwidth">
+  			<label class="input-title">链接名称</label>
+  			<input placeholder="佩伦导航" name="linkname" autocomplete="off" type="text" class="name">
+	  	</div>
+	  	<div class="input fullwidth">
+  			<label class="input-title">链接地址</label>
+  			<input placeholder="https://peilun.cc/" name="link" autocomplete="off" type="text" class="address">
+	  	</div>
+	  	<div class="btn shengcheng">生成</div>
+	  	<div class="btn fanhui">返回</div>
+    </div>
+	<div class="con pt" style="">
+  		<div class="title">
+  			<span>生成结果</span>
+  		</div>
+	  	<div class="input fullwidth">
+  			<pre class="input-title" id="in"></pre>
+	  	</div>
+	  	<div class="btn fuzhi">复制</div>
+    </div>
+
+    <script type="text/javascript">
+	$(".shengcheng").click(function(){
+		$("#in").html($("#in").html() + "&#09;&#10;new link(\"" + $(".address").val() +"\", \"" + $(".name").val() + "\"),");
+	});
+	$(".fanhui").click(function(){
+		var myurl=GetQueryString("url");
+		if(myurl !=null && myurl.toString().length>1)
+		{
+		   	window.location.href=myurl;
+		}else{
+			window.location.href='https://peilun.cc';
+		}
+	});
+	$(".fuzhi").click(function(){
+		CopyToClipboard($("#in").html())
+	});
+	$(function(){
+		if(localStorage.getItem("shoucang") == null)	localStorage.setItem('shoucang',"");
+	    var allshoucang = new Array();
+	    var collects = new Array(); //定义一数组
+	    var innertext = "";
+		collects = localStorage.getItem("shoucang").split("|");
+		for (var i = 0; i < collects.length - 1; i++) {
+			allshoucang.push(new link(collects[i].split("*")[0], collects[i].split("*")[1]));
+		}
+		for (var i = 0; i < allshoucang.length; i++) {
+			$("#in").html($("#in").html() + "&#09;&#10;new link(\"" + allshoucang[i].linkName +"\", \"" + allshoucang[i].name + "\"),");
+		}
+	});
+	</script>
+	<script src="../js/tail.js"></script>
+  </body>
+</html>
