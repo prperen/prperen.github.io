@@ -26,16 +26,20 @@ if (null != localStorage.getItem("name") && "" != localStorage.getItem("name")) 
 	var index = Math.round(Math.random() * (classify.length - 1));
 	state = classify[index]
 	$(".subtitle").html(localStorage.getItem("name") + "，" + state)
-	$.ajax({
-		url: "https://v2.alapi.cn/api/soul?token=qXRLP50xskWLwIx3",
-		dataType: 'JSON',
-		jsonp: 'callback',
-		type: "GET",
-		data: {
-			format: "json"
-		},
-		success: function(re) {
-			$(".subtitle").html($(".subtitle").html() + re.data.content)
-		}
-	})
+	if ("杜洪泉" != localStorage.getItem("name")) {
+		$.ajax({
+			url: "https://v2.alapi.cn/api/soul?token=qXRLP50xskWLwIx3",
+			dataType: 'JSON',
+			jsonp: 'callback',
+			type: "GET",
+			data: {
+				format: "json"
+			},
+			success: function(re) {
+				$(".subtitle").html($(".subtitle").html() + re.data.content)
+			}
+		})
+	} else {
+		$(".subtitle").html("致 杜洪泉&nbsp;&nbsp;&nbsp;&nbsp;" + "<iframe src='https://zuanbot.com/api.php?level=min' style='border:0;height:4.3rem;width:22rem;background-color:white;overflow:hidden;'frameborder='no' border='0' marginwidth='0' marginheight='0' scrolling='no' allowtransparency='yes'></iframe>")
+	}
 }
