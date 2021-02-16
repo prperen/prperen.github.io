@@ -1,6 +1,4 @@
 var mylink=new Array();var a=GetQueryString("i");if(a=="me"){mylink=new Array(new link("https://wj.qq.com/","腾讯问卷"),
-	new link("https://tools.miku.ac","Miku"),
-	new link("https://netcn.console.aliyun.com/core/host/list2","主机管理"),
 new link("https://github.com/prpeilun/prpeilun.github.io","佩伦主页网站"),
 new link("https://github.com/prperen/prperen.github.io","佩伦导航网站"),
 new link("https://github.com/dsgbz/dsgbz.github.io","广播站网站"),
@@ -9,11 +7,14 @@ new link("html/newone.html?url="+window.location.href,"新链接"),
 new link("http://tools.bugscaner.com/chaojiwailian/","外链1"),
 new link("https://seo.dmeng.net/","外链2"),
 new link("http://www.6ke.com.cn/tool/","外链3"),
-new link("https://mp.weixin.qq.com","缔声"),
+new link("https://mp.weixin.qq.com/","微信公众平台"),
 new link("http://bj.96weixin.com/","公众号排版"),
 new link("http://ppt.koutu.vip/", "素材解析"),
 new link("https://www.canva.cn/","Canva"),
-new link("https://study.163.com/course/courseMain.htm?courseId=1004943019&share=1&shareId=1027183833","数据结构"))}
+new link("http://dsgbz.com/", "广播站官网"),	
+new link("http://dsgbz.com/gedan", "歌单整理"),	
+new link("http://dsgbz.com/gd", "在线歌单"),	
+new link("https://github.com/dsgbz/dsgbz.github.io/edit/main/gd/index.html", "编辑在线歌单"))}
 all[0].linkArray=mylink;
 if(localStorage.getItem("shoucang")!=null){
 var cos=new Array();
