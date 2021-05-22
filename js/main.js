@@ -1,4 +1,4 @@
-var mylink=new Array();var a=GetQueryString("i");if(a=="me"){mylink=new Array(new link("https://wj.qq.com/","腾讯问卷"),
+var mylink=new Array(new link("https://gkzy.jleea.com.cn/","志愿填报系统测试");var a=GetQueryString("i");if(a=="me"){mylink=new Array(new link("https://wj.qq.com/","腾讯问卷"),
 new link("https://github.com/prpeilun/prpeilun.github.io","佩伦主页网站"),
 new link("https://github.com/prperen/prperen.github.io","佩伦导航网站"),
 new link("https://github.com/dsgbz/dsgbz.github.io","广播站网站"),
