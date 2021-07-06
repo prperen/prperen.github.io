@@ -1,4 +1,4 @@
-var mylink=new Array(new link("https://gkzy.jleea.com.cn/","志愿填报系统测试"));var a=GetQueryString("i");if(a=="me"){mylink=new Array(new link("https://wj.qq.com/","腾讯问卷"),
+var mylink=new Array();var a=GetQueryString("i");if(a=="me"){mylink=new Array(new link("https://wj.qq.com/","腾讯问卷"),
 new link("https://github.com/prpeilun/prpeilun.github.io","佩伦主页网站"),
 new link("https://github.com/prperen/prperen.github.io","佩伦导航网站"),
 new link("https://github.com/dsgbz/dsgbz.github.io","广播站网站"),
@@ -14,7 +14,13 @@ new link("https://www.canva.cn/","Canva"),
 new link("http://dsgbz.com/", "广播站官网"),	
 new link("http://dsgbz.com/gedan", "歌单整理"),	
 new link("http://dsgbz.com/gd", "在线歌单"),	
-new link("https://github.com/dsgbz/dsgbz.github.io/edit/main/gd/index.html", "编辑在线歌单"))}
+new link("https://github.com/dsgbz/dsgbz.github.io/edit/main/gd/index.html", "编辑在线歌单"),
+new link("https://i.mi.com/?_locale=zh_CN#/", "小米云服务"),	
+new link("http://api.btstu.cn/sjbz/?lx=dongman&k=8197557733577572", "随机动漫图片"),	
+new link("http://noi.openjudge.cn/", "openjudge"),	
+new link("https://www.luogu.com.cn/", "洛谷"),	
+new link("http://y.webzcz.cn/", "免费下载音乐"),	
+new link("https://pixelmap.amcharts.com/", "地图生成"))}
 all[0].linkArray=mylink;
 if(localStorage.getItem("shoucang")!=null){
 var cos=new Array();
