@@ -1,6 +1,6 @@
 var all =
  new Array(new block("我的收藏", "shoucang",
- new Array((new link("http://jwstudent.lnu.edu.cn/", "辽宁大学教务管理"))),
+ new Array(new link("http://jwstudent.lnu.edu.cn/", "辽宁大学教务管理")),
  new block("学习工具", "xuexi",
  new Array(new link("http://www.chengyujielong.com.cn/", "成语接龙"),
  new link("http://jfc120.com/", "在线解方程"),
