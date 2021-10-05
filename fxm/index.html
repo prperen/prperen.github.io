@@ -11,12 +11,20 @@
 <body ontouchstart="">
 <img src="tp (1).png" id="img" />
 <div style="margin-top: 1rem;margin-left: 1rem;font-size: 0.9rem;margin-bottom: 0.4rem;color: rgb(121,121,121);">学生返校通行证</div>
-<hr style="height:1px;border:none;border-top: 0.1px solid rgb(230, 230, 230);margin: 0 auto;width: 100%;" />
+<hr style="height:1px;border:none;border-top: 0.1px solid rgb(230, 230, 230);margin: 0 auto;width: 98%;" />
 <img src="yonghu.png" id="img2"/>
-<div class="fk">学号：20211491207</div>
+<div class="fk" id="xuehao">学号：20211491207</div>
 <hr/>
 <img src="yonghu.png" id="img2"/>
-<div class="fk">姓名：潘一山</div>
+<div class="fk" id="name">姓名：潘一山</div>
+<script type="text/javascript">
+var url = decodeURI(window.location.href);
+var argsIndex = url .split("?name=");
+var arg = argsIndex[1];
+if(arg)
+document.getElementById('name').innerHTML = "姓名：" + arg;
+document.getElementById('xuehao').innerHTML = "学号：202114922" + (Math.floor(Math.random() * 29) + 1);
+</script>
 <hr/>
 <img src="yonghu.png" id="img2"/>
 <div class="fk">学院：信息学院</div>
@@ -25,7 +33,7 @@
 <div class="fk" id="time">时间：2021/10/5 23:20:10</div>
 <hr/>
 
-<div style="text-align: center;margin-top: 4rem;color: rgb(177,177,177);font-size: 0.8rem;">版权所有 © 辽宁大学</div>
+<div style="text-align: center;margin-top: 4rem;color: rgb(177,177,177);">版权所有 © 辽宁大学</div>
 <script type="text/javascript">
     var da = new Date();
     var a = da.getFullYear()
