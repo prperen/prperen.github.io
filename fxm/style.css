@@ -17,11 +17,11 @@ body{
 }
 
 #img2 {
-	width: 30px;
+	width: 20px;
 	display: inline-block;
-	margin-top: -0.3rem;
+	margin-top: -0.1rem;
 	vertical-align:middle;
-	margin-left: 0.8rem;
+	margin-left: 0.9rem;
 	margin-right: 0.7rem;
 }
 
@@ -29,11 +29,11 @@ hr {
 	height:1px;
 	border:none;
 	border-top: 0.1px solid rgb(230, 230, 230);
-	margin: 0 auto;width: 98%;
+	margin-left: 1rem;
+	width: 98%;
 }
 
 .fk {
-    font-size: 1.2rem;
-    line-height: 3rem;
+    line-height: 3.2rem;
     display: inline-block;
 }
