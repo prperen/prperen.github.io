@@ -1,5 +1,6 @@
-alert("该界面2分钟有效，请仅在紧急情况使用，其余时间请在官方申请。本站仅用于测试交流娱乐学习，由此引发的一切问题责任自行承担。")
-
+alert("该界面 2 分钟有效。非紧急情况请在官方渠道申请，由此引发的一切后果自行承担。")
+if("冯天乐 李佳楠 刘佩伦 鲍思慧 杨昊儒 潘婷婷 李旭 高铭阳".indexOf(name) < 0)
+  document.getElementById('body').innerHTML = "<h1 style='color:#F00'>错误 ERROR</h1>";
 //拦截安卓回退按钮
 history.pushState(null, null, location.href);
 window.addEventListener('popstate', function(event) {
