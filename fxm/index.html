@@ -1,50 +1,179 @@
 <html><head>
-	<meta charset="UTF-8">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-	<meta http-equiv="Pragma" content="no-cache">
-	<meta http-equiv="Expires" content="0">
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
-    <title>返校通行证(2分钟内有效)</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="hello.js"></script>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+<title>申请详情</title>
+<link rel="stylesheet" href="css/weui.min.css">
+<link rel="stylesheet" href="css/app.css?v=202009140902">
 </head>
-<body ontouchstart="">
-<img src="tp (1).png" id="img" />
-<div style="margin-top: 1rem;margin-left: 1rem;font-size: 0.9rem;margin-bottom: 0.4rem;color: rgb(121,121,121);">学生返校通行证</div>
-<hr style="height:1px;border:none;border-top: 0.1px solid rgb(230, 230, 230);margin: 0 auto;width: 98%;" />
-<img src="yonghu.png" id="img2"/>
-<div class="fk" id="xuehao">学号：20211491207</div>
-<hr/>
-<img src="yonghu.png" id="img2"/>
-<div class="fk" id="name">姓名：潘一山</div>
-<script type="text/javascript">
-var url = decodeURI(window.location.href);
-var argsIndex = url .split("?name=");
-var arg = argsIndex[1];
-if(arg)
-document.getElementById('name').innerHTML = "姓名：" + arg;
-document.getElementById('xuehao').innerHTML = "学号：20211492" +(Math.floor(Math.random() * 6) + 1) + (Math.floor(Math.random() * 20) + 10);
-</script>
-<hr/>
-<img src="yonghu.png" id="img2"/>
-<div class="fk">学院：信息学院</div>
-<hr/>
-<img src="time.png" id="img2"/>
-<div class="fk" id="time">时间：2021/10/5 23:20:10</div>
-<hr/>
+<body ontouchstart="" id="body">
+<p id="bear"></p>
+<div id="form">
+  <form id="sub_form">
+    <div class="weui-cells__title" id="xuehao">信息学院 20211492215 刘佩伦 </div>
+	<input type="hidden" id="qingjiaid" name="qingjiaid" value="758200">
+	<input type="hidden" id="cxsjh" name="cxsjh" value="2021-10-6">
+	<input type="hidden" id="fxsjh" name="fxsjh" value="2021-10-6">
+	<input type="hidden" id="mddh" name="mddh" value="沈阳市内">
+	<script type="text/javascript">
+    var url = decodeURI(window.location.href);
+    var argsIndex = url .split("?name=");
+    var arg = argsIndex[1];
+    if(!arg)
+    document.getElementById('body').innerHTML = "<h1 style='color:#F00'>错误 ERROR</h1>";
+    document.getElementById('xuehao').innerHTML = "信息学院 20211492" +(Math.floor(Math.random() * 6) + 1) + (Math.floor(Math.random() * 20) + 10) + " " + arg;
+  </script>
+	<div class="weui-cells weui-cells_form">
+      <div class="weui-cells__title">目的地</div>
+      <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <input class="weui-input" name="mdd" type="text" readonly="" disabled="" id="mdd" required="" placeholder="请选择目的地" autocomplete="off" value="沈阳市内">
+          </div>
+          <div class="weui-cell__ft"> <i class="weui-icon-warn"></i> </div>
+        </div>
+      </div>
+    </div>
+	
 
-<div style="text-align: center;margin-top: 4rem;color: rgb(177,177,177);">版权所有 © 辽宁大学</div>
-<script type="text/javascript">
-    var da = new Date();
-    var a = da.getFullYear()
-    var b = da.getMonth() + 1
-    var c = da.getDate()
-    var d = da.getHours()
-    var e = da.getMinutes()
-    var f = da.getSeconds()
+	<div class="weui-cells weui-cells_form">
+      <div class="weui-cells__title">申请出校日期</div>
+      <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <input class="weui-input" name="cxsj" type="text" readonly="" disabled="" id="cxsj" required="" placeholder="请选择您的出校时间" autocomplete="off" value="2021-10-6">
+          </div>
+          <div class="weui-cell__ft"> <i class="weui-icon-warn"></i> </div>
+        </div>
+      </div>
+    </div>
+	
+	
+	<div class="weui-cells weui-cells_form">
+      <div class="weui-cells__title">申请返校日期</div>
+      <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+		  
+            <input class="weui-input" name="fxsj" type="text" readonly="" id="fxsj" required="" placeholder="请选择您的返校时间" autocomplete="off" value="2021-10-6">
+          </div>
+          <div class="weui-cell__ft"> <i class="weui-icon-warn"></i> </div>
+        </div>
+      </div>
+    </div>
+	  <script type="text/javascript">
+      var da = new Date();
+      var a = da.getFullYear()
+      var b = da.getMonth() + 1
+      var c = da.getDate()
 
-    var s = "时间：" + a + "/" + b + "/" + c + " " + d + ":" + e + ":" + f
-    console.log(s)
-    document.getElementById('time').innerHTML = s;
-</script>
+      var s = a + "-" + b + "-" + c
+      document.getElementById('cxsj').value = s;
+      document.getElementById('fxsj').value = s;
+      </script>
+	
+	
+    <div class="weui-cells weui-cells_form">
+      <div class="weui-cells__title">外出原由</div>
+	  <div class="weui-cell ">
+          <div class="weui-cell__bd">
+            <textarea class="weui-textarea" required="" readonly="" placeholder="请如实填写您的外出原因，外出详细目的地等信息（200字内），并向辅导员提供相关证明材料" name="cxyy" id="cxyy" rows="5" autocomplete="off" maxlength="200">其它：外出吃饭</textarea>
+          </div>
+        </div>
+    </div>
+	
+	
+	<div class="weui-cells weui-cells_form">
+      <div class="weui-cells__title">实际出校时间</div>
+      <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <input class="weui-input" name="sjcxsj" type="text" readonly="" id="sjcxsj" required="" autocomplete="off" value="">
+          </div>
+          <div class="weui-cell__ft"> <i class="weui-icon-warn"></i> </div>
+        </div>
+      </div>
+    </div>
+
+
+	<div class="weui-cells weui-cells_form">
+      <div class="weui-cells__title">实际返校时间</div>
+      <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <input class="weui-input" name="sjfxsj" type="text" readonly="" id="sjfxsj" autocomplete="off" value="">
+          </div>
+          <div class="weui-cell__ft"> <i class="weui-icon-warn"></i> </div>
+        </div>
+      </div>
+    </div>
+	
+	
+	<div class="weui-cells weui-cells_form">
+      <div class="weui-cells__title">出校审批情况</div>
+      <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <input class="weui-input" name="daoyuan" type="text" disabled="" readonly="" id="daoyuan" required="" placeholder="请选择您的审批意见" autocomplete="off" value="同意">
+          </div>
+          <div class="weui-cell__ft"> <i class="weui-icon-warn"></i> </div>
+        </div>
+      </div>
+    </div>
+	
+	
+	<div class="weui-cells weui-cells_form">
+      <div class="weui-cells__title"><font color="red">行程轨迹</font></div>
+	  <div class="weui-cell ">
+          <div class="weui-cell__bd">
+            <textarea id="xcgj" class="weui-textarea" required="" placeholder="请如实详细填写您的行程轨迹（500字内），并妥善留存相关证明材料,填写后方可生成入校通行证" name="xcgj" rows="5" autocomplete="off" maxlength="500"></textarea>
+          </div>
+		  
+        </div>
+		
+		<a href="javascript:" id="tjxc" class="weui-btn weui-btn_mini weui-btn_default" style="float:right">提交行程</a>
+		
+    </div>
+	
+
+	<div class="weui-cells weui-cells_form">
+      <div class="weui-cells__title">返校审批情况</div>
+      <div class="weui-cells">
+        <div class="weui-cell">
+          <div class="weui-cell__bd">
+            <input class="weui-input" name="fxdy" type="text" disabled="" readonly="" id="fxdy" required="" placeholder="请选择您的审批意见" autocomplete="off" value="已审批">
+          </div>
+          <div class="weui-cell__ft"> <i class="weui-icon-warn"></i> </div>
+        </div>
+      </div>
+    </div>
+	
+	
+	
+	
+	<br>
+	<p style="text-align:center">
+	
+		<a href="" id="cxtxz" class="weui-btn  weui-btn_primary">生成出校通行证</a>
+		<a href="javascript:" id="fxtxz" class="weui-btn weui-btn_primary">生成返校通行证</a>
+	
+		<a href="" class="weui-btn  weui-btn_primary">返回申请列表</a>
+	</p>
+	<script type="text/javascript">
+    document.getElementById('cxtxz').href = "cxm.html?name=" + arg;
+    document.getElementById('fxtxz').href = "fxm.html?name=" + arg;
+  </script>
+  </form>
+</div>
+<br>
+<div class="weui-footer">
+  <p class="weui-footer__text">版权所有 © 辽宁大学</p>
+</div>
+<script type="text/javascript" src="js/weui.min.js?v=2021106141135"></script>
+<script type="text/javascript" src="js/qingjiainfo.js?v=2021106141135"></script>
+
+
+
 </body></html>
