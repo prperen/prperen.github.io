@@ -1,3 +1,5 @@
+alert("该界面2分钟有效，请仅在紧急情况使用，其余时间请在官方申请。本站仅用于测试交流娱乐学习，由此引发的一切问题责任自行承担。")
+
 //拦截安卓回退按钮
 history.pushState(null, null, location.href);
 window.addEventListener('popstate', function(event) {
