@@ -1,5 +1,5 @@
-alert("该界面 2 分钟有效。非紧急情况请在官方渠道申请，由此引发的一切后果自行承担。")
-if("冯天乐 李佳楠 刘佩伦 鲍思慧 杨昊儒 潘婷婷 李旭 高铭阳".indexOf(name) < 0)
+alert("通行证仅能生成一次，且2分钟内有效，请及时出校！尽量请在官方渠道申请，一切后果自行承担。")
+if("冯天乐 李佳楠 刘佩伦 杨昊儒 潘婷婷 李旭 高铭阳".indexOf(name) < 0)
   document.getElementById('body').innerHTML = "<h1 style='color:#F00'>错误 ERROR</h1>";
 //拦截安卓回退按钮
 history.pushState(null, null, location.href);
