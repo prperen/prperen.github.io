@@ -1,0 +1,69 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="zh-cn">
+<meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport">
+<meta name="google-site-verification" content="1u7-iZx1W2DF1tV8LUD1cauJrMnYgXLLjhTHXGcZqh0" /> 
+<title>佩伦导航 - 分类网站集合</title>
+<meta name="description" content="佩伦导航是各类网站的集合，依据类型进行导航。佩伦导航便于各类用户快速找到自己想要的网站。佩伦导航具有较高的实用性，无任何类型的广告，简洁易用。佩伦导航致力于成为您的浏览器主页。欢迎使用佩伦导航。">
+<meta name="keywords" content="佩伦导航,导航页,导航,网址导航">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/head.js"></script>
+</head>
+<body style="display:none" class="test-5">
+<div class="bgimg">
+</div>
+<script type="text/javascript">
+	$.ajax({
+		url: "https://v2.alapi.cn/api/acg?token=qXRLP50xskWLwIx3",
+		dataType: 'JSON',
+		jsonp: 'callback',
+		type: "GET",
+		data: {
+			format: "json"
+		},
+		success: function(re) {
+			$(".bgimg").css("background-image",'url("' + re.data.url + '")')
+			console.log("SB" + re.data.url)
+		}
+	})
+	$(function(){$("body").fadeIn(800)})</script>
+<div class="navbar">
+	<header>
+	<!-- https://cdn.jsdelivr.net/gh/prperen/prperen.github.io/img/pldh2.png -->
+	<h1 class="title"><a href="https://sblpl.cn"><img src="https://cdn.jsdelivr.net/gh/prperen/prperen.github.io/img/pldh2.png" class="pldh"> - 分类网站集合</a></h1>
+	<a class="subtitle" onclick="location.reload()">刘佩伦的个人主页</a>
+	<script type="text/javascript">null!=localStorage.getItem("name")&&""!=localStorage.getItem("name")||$(".subtitle").attr("href","html/setting.html?url="+window.location.href)
+</script>
+	<script src="js/greet.js"></script>
+	</header>
+	<div class="search">
+		<img src="img/icoc/black.ico" alt="搜索" class="searchicoc" onclick="goOn()"><input type="search" placeholder="使用 百度 进行搜索 (Ctrl + Q)">
+	</div>
+</div>
+<div class="con notice transparent">
+	<h2 style="margin:19 auto">自我介绍</h2>
+	<p style="margin:16 0;text-indent:2em">
+		刘佩伦，男，18岁，阳光向上、勤奋好学，具备良好的思想品德、个人能力、家国情怀。
+	</p>
+	<p style="margin:16 0;text-indent:2em">
+		曾获长春市市级优秀团员、长春市新时代好少年荣誉称号。
+	</p>
+	<p style="margin:16 0;text-indent:2em">
+		富有爱心，尊敬师长，遵守校规校纪，团结同学，待人热情诚恳，诚信懂理，集体荣誉感强，热心帮助同学。他积极参加各项活动，充分发挥自己计算机方面的特长，为同学、老师们排忧解难，为校学生会、广播站提供技术支持。同时积极参与到学校各项活动的筹备之中，经常在各项大型活动的后台参与工作，助力完美舞台。尊重同学、团结同学、关心同学，可以很好的处理与同学之间的关系。对老师交给的任务，能够保证质量、有条不紊地完成。
+	</p>
+	<p style="margin:16 0;text-indent:2em">
+		在老师的教育和父母的谆谆教导和自己坚持不懈的努力下，我养成了良好的学习习惯：专心学习，勤学好问，多思求是。面对繁重的学习任务，我始终不畏艰难，迎难而上，科学合理安排时间，从不偏科。无论课上还是课下，他都能严格遵守学校的纪律和社会公德。按时上学，从不迟到。有较强的适应能力和自学能力，不容易受到外界环境的干扰。
+	</p>
+	<div title="关闭" class="close" onclick='localStorage.setItem("close","yes")'>
+		×
+	</div>
+</div>
+<div id="con"></div>
+<script src="js/normal.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript">$(".con:eq(1)").append("<a href='html/co.html?url="+window.location.href+"' class='btn add' id='jia' target='_self'>添加</a>"),$(".con:eq(1)").append("<a href='html/deco.html?url="+window.location.href+"' class='btn add' id='jian' target='_self'>删除</a>")</script>
+<script type="text/javascript">function goOn(){for(var c=$(".search input").val();0<=c.indexOf("+");)c=c.replace("+","%2B");window.open("https://www.baidu.com/s?wd="+c)}$(".close").click(function(){$(".notice").hide()}),"yes"==localStorage.getItem("close")&&$(".notice").hide(),$(".con,.search,.title,.subtitle").addClass("transparent"),$(".search input").focus(function(){$(".searchicoc").attr("src","img/icoc/white.ico"),$(".search").addClass("focus")}),$(".search input").blur(function(){$(".searchicoc").attr("src","img/icoc/black.ico"),$(".search").removeClass("focus")}),$(".search input").bind("keydown",function(c){13==(window.event||arguments.callee.caller.arguments[0]).keyCode&&goOn()}),$(document).keypress(function(c){17==c.keyCode&&c.ctrlKey&&($(".search input").focus(),c.returnValue=!1)})</script>
+</body>
+</html>
