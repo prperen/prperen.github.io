@@ -34,8 +34,19 @@
 	<!-- https://cdn.jsdelivr.net/gh/prperen/prperen.github.io/img/pldh2.png -->
 	<h1 class="title"><a href="https://sblpl.cn"><img src="https://cdn.jsdelivr.net/gh/prperen/prperen.github.io/img/pldh2.png" class="pldh"> - 分类网站集合</a></h1>
 	<a class="subtitle" onclick="location.reload()">刘佩伦的个人主页</a>
-	<script type="text/javascript">null!=localStorage.getItem("name")&&""!=localStorage.getItem("name")||$(".subtitle").attr("href","html/setting.html?url="+window.location.href)
-</script>
+	<script type="text/javascript">
+		$.ajax({
+			url: "https://v2.alapi.cn/api/soul?token=qXRLP50xskWLwIx3",
+			dataType: 'JSON',
+			jsonp: 'callback',
+			type: "GET",
+			data: {
+				format: "json"
+			},
+			success: function(re) {
+				$(".subtitle").html(re.data.content)
+			}
+	</script>
 	<script src="js/greet.js"></script>
 	</header>
 	<div class="search">
@@ -45,7 +56,7 @@
 <div class="con notice transparent">
 	<h2 style="margin:19 auto">我的自我介绍</h2>
 	<p style="margin:16 0;text-indent:2em">
-		刘佩伦，男，18岁，阳光向上、勤奋好学，具备良好的思想品德、个人能力、家国情怀。
+		刘佩伦，男，18岁，电子信息类2班，阳光向上、勤奋好学，具备良好的思想品德、个人能力、家国情怀。
 	</p>
 	<p style="margin:16 0;text-indent:2em">
 		曾获长春市市级优秀团员、长春市新时代好少年荣誉称号。
@@ -54,13 +65,28 @@
 		富有爱心，尊敬师长，遵守校规校纪，团结同学，待人热情诚恳，诚信懂理，集体荣誉感强，热心帮助同学。我积极参加各项活动，充分发挥自己计算机方面的特长，为同学、老师们排忧解难，为校学生会、广播站提供技术支持。同时积极参与到学校各项活动的筹备之中，经常在各项大型活动的后台参与工作，助力完美舞台。尊重同学、团结同学、关心同学，可以很好的处理与同学之间的关系。对老师交给的任务，能够保证质量、有条不紊地完成。
 	</p>
 	<p style="margin:16 0;text-indent:2em">
-		在老师的教育和父母的谆谆教导和自己坚持不懈的努力下，我养成了良好的学习习惯：专心学习，勤学好问，多思求是。面对繁重的学习任务，我始终不畏艰难，迎难而上，科学合理安排时间，从不偏科。无论课上还是课下，他都能严格遵守学校的纪律和社会公德。按时上学，从不迟到。有较强的适应能力和自学能力，不容易受到外界环境的干扰。
+		在老师的教育和父母的谆谆教导和自己坚持不懈的努力下，我养成了良好的学习习惯：专心学习，勤学好问，多思求是。面对繁重的学习任务，我始终不畏艰难，迎难而上，科学合理安排时间，从不偏科。无论课上还是课下，我都能严格遵守学校的纪律和社会公德。按时上学，从不迟到。有较强的适应能力和自学能力，不容易受到外界环境的干扰。
 	</p>
 	<div title="关闭" class="close" onclick='localStorage.setItem("close","yes")'>
 		×
 	</div>
 </div>
 <div id="con"></div>
+<div class="con notice transparent">
+	<h2 style="margin:19 auto">关于网站停止维护的通知</h2>
+	<p style="margin:16 0;text-indent:2em">
+		本人是一名 <b style="color:#c0392b">在读高中生 </b>，无法承担<b style="color:#2980b9"> 服务器 </b>的<b style="color:#f40"> 巨额费用 </b>。一直以来我坚信<b style="color:#1e90ff"> “ 知识改变命运 ” </b>，我深知要不断的完善自己才能摆脱贫困。贫困不是我的绊脚石，相反它是我<b style="color:#3742fa"> 前进的动力 </b>。
+	</p>
+	<p style="margin:16 0;text-indent:2em">
+		同时，我非常感谢各位给予我的帮助，我会在以后的日子里，更加严格要求自己，学好科学文化知识，争取早日服务于社会，为国家奉献一份力量。我想我现在能做的就是好好学习,将来做一个对国家、社会有用的人，尽自己所能来回报所有帮助过我的人，回报社会。
+	</p>
+	<p style="margin:16 0;text-indent:2em">
+		经过几天激烈的商量与研讨，我谨代表 <b style="color:gold;font-size:1.15em;text-shadow:1px 1px 0 #000">长春市佩伦科技有限公司 </b>宣布停止对网站的维护并托管至 <b style="color: #f4f8fb;background-color: black;">Porn</b><b style="color:#000;background-color: rgba(247, 151, 29, 1);">hub</b> 呵忒 <b style="color:#24292e"> Github </b>，网站仍可正常使用。可通过 <a href="https://wj.qq.com/s2/3808169/f7d3/">留言反馈 </a>联系我们。再次，真挚的感谢各位与会的领导、评委和在座的朋友们！
+	</p>
+	<div title="关闭" class="close" onclick='localStorage.setItem("close","yes")'>
+		×
+	</div>
+</div>
 <script src="js/normal.js"></script>
 <script src="js/main.js"></script>
 <script type="text/javascript">$(".con:eq(1)").append("<a href='html/co.html?url="+window.location.href+"' class='btn add' id='jia' target='_self'>添加</a>"),$(".con:eq(1)").append("<a href='html/deco.html?url="+window.location.href+"' class='btn add' id='jian' target='_self'>删除</a>")</script>
