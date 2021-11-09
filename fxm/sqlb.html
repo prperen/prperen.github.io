@@ -26,7 +26,7 @@
 			<div class="weui-cell  weui-cell_example" id='cx' class="hp">
 				<div class="weui-cell__hd"><img src="images/appoint.png" style="width: 20px; margin-right: 16px; display: block;"></div>
 				<div class="weui-cell__bd">
-					<p>刘佩伦 2021/11/9~2021/11/9</p>
+					<p class="nm">刘佩伦 2021/11/9~2021/11/9</p>
 				</div>
 				<div class="weui-cell__ft">
 				已同意出校>
@@ -35,7 +35,7 @@
 			<div class="weui-cell  weui-cell_example" id='fx' class="hp">
 				<div class="weui-cell__hd"><img src="images/appoint.png" style="width: 20px; margin-right: 16px; display: block;"></div>
 				<div class="weui-cell__bd">
-					<p>刘佩伦 2021/11/9~2021/11/9</p>
+					<p class="nm">刘佩伦 2021/11/9~2021/11/9</p>
 				</div>
 				<div class="weui-cell__ft">
 				已同意返校>
@@ -53,7 +53,7 @@
 			var c = da.getDate()
 
 			var s = a + "/" + b + "/" + c
-			$('.hp div p').html(name + " " + s + "~" + s);
+			$('.nm').html(name + " " + s + "~" + s);
 			$('#cx div').attr("onclick", "location.href='indexcx.html?name=" + argsIndex[1] + "'")
 			$('#fx div').attr("onclick", "location.href='indexfx.html?name=" + argsIndex[1] + "'")
 		</script>
