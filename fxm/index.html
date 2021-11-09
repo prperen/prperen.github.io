@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>风险声明</title>
 	<link rel="stylesheet" href="css/weui.min.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
 	<div class="weui-msg" style="opacity: 1;" id="s2">
@@ -28,7 +29,7 @@
     <div class="weui-msg__opr-area">
         <p class="weui-btn-area">
             <a id="enter" class="weui-btn weui-btn_primary">我已阅读并同意</a>
-            <a onclick="self.opener=null;self.close();" class="weui-btn weui-btn_warn">我不同意</a>
+            <a onclick="$('body').html('<h1 style=\'color:#F00\'>请立即退出</h1>');" class="weui-btn weui-btn_warn">我不同意</a>
         </p>
     </div>
 	<script type="text/javascript">
