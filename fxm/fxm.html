@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
     <title>返校通行证(2分钟内有效)</title>
     <link rel="stylesheet" href="css/weui.min.css">
-    <script type="text/javascript" src="js/weui.min.js?v=2021106142041" charset="UTF-8"></script>
+    <link rel="stylesheet" href="css/app.css">
+    <script type="text/javascript" src="js/weui.min.js" charset="UTF-8"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body ontouchstart="" id="body">
 
 <div id="bodyDiv">
-	<p style="text-align: center; background: rgb(132, 135, 28);" id="imgBg"><br><img src="images/pass2.png" alt=""><br><br></p>
+	<p id="imgBg"><br><img src="images/pass.png" alt=""><br><font style="font-size:100px" id="font">15:04:32</font></p>
 	<div class="weui-cells__title">学生返校通行证</div>
 	<div class="weui-cells">
 		<div class="weui-cell  weui-cell_example">
@@ -67,8 +69,9 @@
 		    var e = fk(da.getMinutes())
 		    var f = fk(da.getSeconds())
 
-		    var s = "时间：" + a + "/" + b + "/" + c + " " + d + ":" + e + ":" + f
+		    var s = "时间：" + a + "/" + b + "/" + c
 		    document.getElementById('time').innerHTML = s;
+		    document.getElementById('font').innerHTML = d + ":" + e + ":" + f;
 		</script>
 	</div>
 	<br>

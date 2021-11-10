@@ -8,6 +8,9 @@
         .item{
             padding: 10px 0;
         }
+        #imgBg {
+            text-align: center;
+        }
         .item__title{
             margin-bottom: 5px;
             padding-left: 15px;
