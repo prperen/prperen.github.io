@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Color</title>
+    <link rel="stylesheet" href="css/weui.min.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+    <div class="weui-msg" style="opacity: 1;" id="s2">
+        <div class="weui-msg__icon-area"><i class="weui-icon-warn  weui-icon_msg"></i></div>
+        <div class="weui-msg__text-area">
+            <h2 class="weui-msg__title">COLOR</h2>
+            <div class="weui-cell__bd">
+                <input class="weui-input" placeholder="please enter the color" id="in">
+            </div>
+        </div>
+        <div class="weui-msg__opr-area">
+            <p class="weui-btn-area">
+                <a  onclick="fuck()" class="weui-btn weui-btn_primary">ENTER</a>
+            </p>
+        </div>
+        <div class="weui-msg__extra-area" id="extra">
+            
+        </div>
+    </div>
+    <div class="weui-cell">
+        
+    </div>
+    <script type="text/javascript">
+        var url = decodeURI(window.location.href);
+        var argsIndex = url.split("?name=")
+        function fuck(){
+            location.href = "password.html?name=" + argsIndex[1] + "--color=" + $("#in").val()
+        }
+        var colors = ["black","silver","gray","white","maroon","red","purple","fuchsia","green","lime","olive","yellow","navy","blue","teal","aqua","pink"]
+        for (var i = 0; i < colors.length; i++) {
+            $("#extra").html($("#extra").html() + "<div style='display: inline-block;'>"
+            + "<a style='vertical-align: top;' href=password.html?name=" + argsIndex[1] + "--color=" + colors[i] +">" + colors[i]
+            + "<span style='width:100px;height:30px;display:inline-block;margin-left:10px;margin-right:20px;border: black solid;background:" + colors[i] +"'></span></a>"
+            + "</div>")
+            if((i + 1) % 2 == 0)  $("#extra").html($("#extra").html() + "<br>")
+        }
+    </script>
+</div>
+</body>
+</html>

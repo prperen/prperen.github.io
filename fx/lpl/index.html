@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		password
+	</title>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+	<h3 id="h3"></h3>
+	<script type="text/javascript">
+		var da = new Date();
+		var a = da.getFullYear()
+		var b = da.getMonth() + 1
+		var c = da.getDate()
+		var c1 = Math.floor(c / 10)
+		var c2 = Math.floor(c % 10)
+		var d = da.getHours()
+		var d1 = Math.floor(d / 10)
+		var d2 = Math.floor(d % 10)
+		var e = Math.floor(da.getMinutes() / 10)
+		var d3 = Math.floor(((d1 + d2) * c + (c1 + c2) * d) * (a - d) * (a + c) * (d2+1) / (e+1) / 33);
+		var password = e + "6" + d3
+		$("h3").html(password)
+	</script>
+</body>
+</html>
